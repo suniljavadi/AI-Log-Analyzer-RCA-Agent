@@ -1,10 +1,12 @@
 # AI Log Analyzer & Root Cause Analysis Agent
 
-**Status: Completed portfolio implementation with synthetic data and mocked tools**
+**Status: Deployable / Not Publicly Hosted**
 
-A production-shaped portfolio project for analyzing synthetic application, API, SQL, SSIS, ETL, and data-quality logs. It combines deterministic parsing and severity rules with retrieval-grounded diagnosis, mocked tool calling, structured observability, FastAPI, Streamlit, SQLAlchemy, PostgreSQL, Docker, and automated evaluation.
+A portfolio project for analyzing synthetic log data, identifying likely operational issues, and summarizing root-cause hypotheses. It combines parsing, structured severity rules, retrieval-grounded analysis, and a clear approval boundary for actions.
 
-> Synthetic data only. The project never connects to production systems and never executes destructive actions.
+## Project Status
+
+This application is deployable and the codebase is validated, but it is not currently hosted as a public app. It is maintained as an engineering example rather than a live public deployment.
 
 ## Problem
 
