@@ -8,6 +8,12 @@ A portfolio project for analyzing synthetic log data, identifying likely operati
 
 This application is deployable and the codebase is validated, but it is not currently hosted as a public app. It is maintained as an engineering example rather than a live public deployment.
 
+## Demo Proof
+
+This project is validated with automated tests rather than a public deployment. The fresh verification run for this project completed successfully with `pytest -q`, returning `6 passed`.
+
+The app remains a deployable engineering project and is intentionally not exposed as a public internet app.
+
 ## Problem
 
 Operational teams often receive a small error fragment with little context. This project turns that fragment into an explainable investigation: what was observed, which historical incidents are similar, what is evidence versus hypothesis, what to check next, and which actions require a human.
