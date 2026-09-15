@@ -1,5 +1,7 @@
 # AI Log Analyzer & Root Cause Analysis Agent
 
+**Status: Completed portfolio implementation with synthetic data and mocked tools**
+
 A production-shaped portfolio project for analyzing synthetic application, API, SQL, SSIS, ETL, and data-quality logs. It combines deterministic parsing and severity rules with retrieval-grounded diagnosis, mocked tool calling, structured observability, FastAPI, Streamlit, SQLAlchemy, PostgreSQL, Docker, and automated evaluation.
 
 > Synthetic data only. The project never connects to production systems and never executes destructive actions.
@@ -221,6 +223,18 @@ git init
 git add .
 git commit -m "Build AI log analyzer and RCA agent"
 git branch -M main
-git remote add origin https://github.com/<your-user>/ai-log-analyzer.git
+git remote add origin https://github.com/suniljavadi/AI-Log-Analyzer-RCA-Agent.git
 git push -u origin main
 ```
+
+## Resume Relevance
+
+Demonstrates Python, FastAPI, Streamlit, SQLAlchemy, deterministic retrieval, RAG-style incident evidence, structured RCA output, approval-gated tools, Docker, observability, and evaluation design for SQL/SSIS/ETL incidents.
+
+## Author and Related Work
+
+**Sunil Javadi** · [GitHub](https://github.com/suniljavadi) · [Portfolio](https://github.com/suniljavadi/sunil-portfolio) · [LinkedIn](https://www.linkedin.com/in/sunil-javadi/)
+
+- [AI Log Analyzer and RCA Agent](https://github.com/suniljavadi/AI-Log-Analyzer-RCA-Agent)
+- [Multi-Agent Data Engineering Assistant](https://github.com/suniljavadi/Multi-Agent-AI-Data-Engineering-Assistant)
+- [Data Engineering MCP Server](https://github.com/suniljavadi/data-engineering-mcp-server)
