@@ -1,0 +1,9 @@
+Job: Order_Load
+System: SSIS
+Timestamp: 2026-01-10T23:00:00
+
+ERROR:
+Checksum mismatch detected in source file.
+
+Execution time: 38.0 minutes
+Expected execution time: 8 minutes

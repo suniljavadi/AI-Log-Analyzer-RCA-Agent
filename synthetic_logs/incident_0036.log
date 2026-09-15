@@ -1,0 +1,9 @@
+Job: Finance_Recon
+System: Data Lake
+Timestamp: 2026-01-11T13:00:00
+
+ERROR:
+Network unreachable while calling dependency.
+
+Execution time: 40.0 minutes
+Expected execution time: 8 minutes

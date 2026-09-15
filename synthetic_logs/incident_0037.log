@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-01-11T20:00:00
+
+ERROR:
+Out of memory while processing batch.
+
+Execution time: 41.0 minutes
+Expected execution time: 8 minutes

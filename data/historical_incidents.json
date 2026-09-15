@@ -1,0 +1,4422 @@
+[
+  {
+    "incident_id": "INC-0001",
+    "timestamp": "2026-01-01T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 5.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0002",
+    "timestamp": "2026-01-01T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 6.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0003",
+    "timestamp": "2026-01-01T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 7.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0004",
+    "timestamp": "2026-01-02T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 8.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0005",
+    "timestamp": "2026-01-02T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 9.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0006",
+    "timestamp": "2026-01-02T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 10.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0007",
+    "timestamp": "2026-01-03T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 11.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0008",
+    "timestamp": "2026-01-03T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 12.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0009",
+    "timestamp": "2026-01-03T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 13.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0010",
+    "timestamp": "2026-01-03T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 14.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0011",
+    "timestamp": "2026-01-04T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 15.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0012",
+    "timestamp": "2026-01-04T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 16.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0013",
+    "timestamp": "2026-01-04T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 17.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0014",
+    "timestamp": "2026-01-05T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 18.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0015",
+    "timestamp": "2026-01-05T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 19.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0016",
+    "timestamp": "2026-01-05T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 20.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0017",
+    "timestamp": "2026-01-06T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 21.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0018",
+    "timestamp": "2026-01-06T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 22.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0019",
+    "timestamp": "2026-01-06T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 23.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0020",
+    "timestamp": "2026-01-06T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 24.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0021",
+    "timestamp": "2026-01-07T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 25.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0022",
+    "timestamp": "2026-01-07T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 26.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0023",
+    "timestamp": "2026-01-07T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 27.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0024",
+    "timestamp": "2026-01-08T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 28.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0025",
+    "timestamp": "2026-01-08T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 29.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0026",
+    "timestamp": "2026-01-08T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 30.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0027",
+    "timestamp": "2026-01-08T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 31.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0028",
+    "timestamp": "2026-01-09T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 32.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0029",
+    "timestamp": "2026-01-09T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 33.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0030",
+    "timestamp": "2026-01-09T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 34.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0031",
+    "timestamp": "2026-01-10T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 35.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0032",
+    "timestamp": "2026-01-10T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 36.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0033",
+    "timestamp": "2026-01-10T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 37.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0034",
+    "timestamp": "2026-01-10T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 38.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0035",
+    "timestamp": "2026-01-11T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 39.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0036",
+    "timestamp": "2026-01-11T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 40.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0037",
+    "timestamp": "2026-01-11T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 41.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0038",
+    "timestamp": "2026-01-12T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 42.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0039",
+    "timestamp": "2026-01-12T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 43.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0040",
+    "timestamp": "2026-01-12T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 44.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0041",
+    "timestamp": "2026-01-13T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 45.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0042",
+    "timestamp": "2026-01-13T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 46.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0043",
+    "timestamp": "2026-01-13T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 47.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0044",
+    "timestamp": "2026-01-13T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 48.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0045",
+    "timestamp": "2026-01-14T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 49.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0046",
+    "timestamp": "2026-01-14T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 5.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0047",
+    "timestamp": "2026-01-14T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 6.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0048",
+    "timestamp": "2026-01-15T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 7.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0049",
+    "timestamp": "2026-01-15T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 8.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0050",
+    "timestamp": "2026-01-15T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 9.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0051",
+    "timestamp": "2026-01-15T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 10.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0052",
+    "timestamp": "2026-01-16T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 11.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0053",
+    "timestamp": "2026-01-16T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 12.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0054",
+    "timestamp": "2026-01-16T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 13.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0055",
+    "timestamp": "2026-01-17T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 14.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0056",
+    "timestamp": "2026-01-17T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 15.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0057",
+    "timestamp": "2026-01-17T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 16.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0058",
+    "timestamp": "2026-01-17T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 17.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0059",
+    "timestamp": "2026-01-18T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 18.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0060",
+    "timestamp": "2026-01-18T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 19.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0061",
+    "timestamp": "2026-01-18T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 20.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0062",
+    "timestamp": "2026-01-19T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 21.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0063",
+    "timestamp": "2026-01-19T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 22.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0064",
+    "timestamp": "2026-01-19T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 23.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0065",
+    "timestamp": "2026-01-20T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 24.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0066",
+    "timestamp": "2026-01-20T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 25.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0067",
+    "timestamp": "2026-01-20T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 26.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0068",
+    "timestamp": "2026-01-20T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 27.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0069",
+    "timestamp": "2026-01-21T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 28.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0070",
+    "timestamp": "2026-01-21T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 29.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0071",
+    "timestamp": "2026-01-21T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 30.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0072",
+    "timestamp": "2026-01-22T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 31.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0073",
+    "timestamp": "2026-01-22T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 32.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0074",
+    "timestamp": "2026-01-22T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 33.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0075",
+    "timestamp": "2026-01-22T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 34.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0076",
+    "timestamp": "2026-01-23T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 35.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0077",
+    "timestamp": "2026-01-23T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 36.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0078",
+    "timestamp": "2026-01-23T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 37.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0079",
+    "timestamp": "2026-01-24T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 38.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0080",
+    "timestamp": "2026-01-24T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 39.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0081",
+    "timestamp": "2026-01-24T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 40.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0082",
+    "timestamp": "2026-01-24T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 41.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0083",
+    "timestamp": "2026-01-25T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 42.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0084",
+    "timestamp": "2026-01-25T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 43.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0085",
+    "timestamp": "2026-01-25T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 44.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0086",
+    "timestamp": "2026-01-26T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 45.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0087",
+    "timestamp": "2026-01-26T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 46.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0088",
+    "timestamp": "2026-01-26T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 47.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0089",
+    "timestamp": "2026-01-27T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 48.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0090",
+    "timestamp": "2026-01-27T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 49.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0091",
+    "timestamp": "2026-01-27T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 5.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0092",
+    "timestamp": "2026-01-27T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 6.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0093",
+    "timestamp": "2026-01-28T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 7.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0094",
+    "timestamp": "2026-01-28T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 8.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0095",
+    "timestamp": "2026-01-28T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 9.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0096",
+    "timestamp": "2026-01-29T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 10.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0097",
+    "timestamp": "2026-01-29T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 11.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0098",
+    "timestamp": "2026-01-29T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 12.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0099",
+    "timestamp": "2026-01-29T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 13.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0100",
+    "timestamp": "2026-01-30T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 14.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0101",
+    "timestamp": "2026-01-30T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 15.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0102",
+    "timestamp": "2026-01-30T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 16.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0103",
+    "timestamp": "2026-01-31T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 17.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0104",
+    "timestamp": "2026-01-31T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 18.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0105",
+    "timestamp": "2026-01-31T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 19.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0106",
+    "timestamp": "2026-01-31T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 20.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0107",
+    "timestamp": "2026-02-01T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 21.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0108",
+    "timestamp": "2026-02-01T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 22.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0109",
+    "timestamp": "2026-02-01T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 23.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0110",
+    "timestamp": "2026-02-02T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 24.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0111",
+    "timestamp": "2026-02-02T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 25.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0112",
+    "timestamp": "2026-02-02T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 26.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0113",
+    "timestamp": "2026-02-03T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 27.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0114",
+    "timestamp": "2026-02-03T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 28.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0115",
+    "timestamp": "2026-02-03T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 29.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0116",
+    "timestamp": "2026-02-03T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 30.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0117",
+    "timestamp": "2026-02-04T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 31.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0118",
+    "timestamp": "2026-02-04T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 32.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0119",
+    "timestamp": "2026-02-04T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 33.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0120",
+    "timestamp": "2026-02-05T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 34.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0121",
+    "timestamp": "2026-02-05T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 35.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0122",
+    "timestamp": "2026-02-05T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 36.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0123",
+    "timestamp": "2026-02-05T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 37.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0124",
+    "timestamp": "2026-02-06T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 38.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0125",
+    "timestamp": "2026-02-06T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 39.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0126",
+    "timestamp": "2026-02-06T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 40.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0127",
+    "timestamp": "2026-02-07T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 41.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0128",
+    "timestamp": "2026-02-07T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 42.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0129",
+    "timestamp": "2026-02-07T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 43.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0130",
+    "timestamp": "2026-02-07T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 44.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0131",
+    "timestamp": "2026-02-08T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 45.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0132",
+    "timestamp": "2026-02-08T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 46.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0133",
+    "timestamp": "2026-02-08T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 47.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0134",
+    "timestamp": "2026-02-09T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 48.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0135",
+    "timestamp": "2026-02-09T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 49.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0136",
+    "timestamp": "2026-02-09T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 5.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0137",
+    "timestamp": "2026-02-10T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 6.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0138",
+    "timestamp": "2026-02-10T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 7.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0139",
+    "timestamp": "2026-02-10T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 8.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0140",
+    "timestamp": "2026-02-10T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 9.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0141",
+    "timestamp": "2026-02-11T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 10.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0142",
+    "timestamp": "2026-02-11T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 11.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0143",
+    "timestamp": "2026-02-11T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 12.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0144",
+    "timestamp": "2026-02-12T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 13.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0145",
+    "timestamp": "2026-02-12T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 14.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0146",
+    "timestamp": "2026-02-12T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 15.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0147",
+    "timestamp": "2026-02-12T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 16.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0148",
+    "timestamp": "2026-02-13T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 17.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0149",
+    "timestamp": "2026-02-13T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 18.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0150",
+    "timestamp": "2026-02-13T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 19.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0151",
+    "timestamp": "2026-02-14T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 20.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0152",
+    "timestamp": "2026-02-14T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 21.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0153",
+    "timestamp": "2026-02-14T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 22.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0154",
+    "timestamp": "2026-02-14T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 23.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0155",
+    "timestamp": "2026-02-15T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 24.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0156",
+    "timestamp": "2026-02-15T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 25.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0157",
+    "timestamp": "2026-02-15T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 26.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0158",
+    "timestamp": "2026-02-16T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 27.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0159",
+    "timestamp": "2026-02-16T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 28.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0160",
+    "timestamp": "2026-02-16T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 29.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0161",
+    "timestamp": "2026-02-17T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 30.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0162",
+    "timestamp": "2026-02-17T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 31.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0163",
+    "timestamp": "2026-02-17T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 32.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0164",
+    "timestamp": "2026-02-17T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 33.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0165",
+    "timestamp": "2026-02-18T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 34.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0166",
+    "timestamp": "2026-02-18T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 35.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0167",
+    "timestamp": "2026-02-18T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 36.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0168",
+    "timestamp": "2026-02-19T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 37.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0169",
+    "timestamp": "2026-02-19T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 38.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0170",
+    "timestamp": "2026-02-19T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 39.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0171",
+    "timestamp": "2026-02-19T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 40.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0172",
+    "timestamp": "2026-02-20T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 41.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0173",
+    "timestamp": "2026-02-20T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 42.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0174",
+    "timestamp": "2026-02-20T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 43.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0175",
+    "timestamp": "2026-02-21T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 44.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0176",
+    "timestamp": "2026-02-21T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 45.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0177",
+    "timestamp": "2026-02-21T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 46.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0178",
+    "timestamp": "2026-02-21T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 47.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0179",
+    "timestamp": "2026-02-22T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 48.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0180",
+    "timestamp": "2026-02-22T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 49.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0181",
+    "timestamp": "2026-02-22T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 5.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0182",
+    "timestamp": "2026-02-23T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 6.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0183",
+    "timestamp": "2026-02-23T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 7.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0184",
+    "timestamp": "2026-02-23T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 8.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0185",
+    "timestamp": "2026-02-24T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 9.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0186",
+    "timestamp": "2026-02-24T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 10.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0187",
+    "timestamp": "2026-02-24T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 11.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0188",
+    "timestamp": "2026-02-24T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 12.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0189",
+    "timestamp": "2026-02-25T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 13.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0190",
+    "timestamp": "2026-02-25T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 14.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0191",
+    "timestamp": "2026-02-25T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 15.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0192",
+    "timestamp": "2026-02-26T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 16.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0193",
+    "timestamp": "2026-02-26T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 17.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0194",
+    "timestamp": "2026-02-26T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 18.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0195",
+    "timestamp": "2026-02-26T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 19.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0196",
+    "timestamp": "2026-02-27T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 20.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0197",
+    "timestamp": "2026-02-27T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 21.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0198",
+    "timestamp": "2026-02-27T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 22.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0199",
+    "timestamp": "2026-02-28T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 23.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0200",
+    "timestamp": "2026-02-28T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 24.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0201",
+    "timestamp": "2026-02-28T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 25.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0202",
+    "timestamp": "2026-02-28T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 26.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0203",
+    "timestamp": "2026-03-01T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 27.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0204",
+    "timestamp": "2026-03-01T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 28.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0205",
+    "timestamp": "2026-03-01T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 29.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0206",
+    "timestamp": "2026-03-02T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 30.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0207",
+    "timestamp": "2026-03-02T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 31.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0208",
+    "timestamp": "2026-03-02T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 32.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0209",
+    "timestamp": "2026-03-03T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 33.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0210",
+    "timestamp": "2026-03-03T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 34.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0211",
+    "timestamp": "2026-03-03T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 35.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0212",
+    "timestamp": "2026-03-03T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 36.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0213",
+    "timestamp": "2026-03-04T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 37.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0214",
+    "timestamp": "2026-03-04T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 38.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0215",
+    "timestamp": "2026-03-04T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 39.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0216",
+    "timestamp": "2026-03-05T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 40.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0217",
+    "timestamp": "2026-03-05T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 41.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0218",
+    "timestamp": "2026-03-05T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 42.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0219",
+    "timestamp": "2026-03-05T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 43.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0220",
+    "timestamp": "2026-03-06T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 44.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0221",
+    "timestamp": "2026-03-06T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 45.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0222",
+    "timestamp": "2026-03-06T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 46.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0223",
+    "timestamp": "2026-03-07T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 47.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0224",
+    "timestamp": "2026-03-07T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 48.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0225",
+    "timestamp": "2026-03-07T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 49.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0226",
+    "timestamp": "2026-03-07T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 5.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0227",
+    "timestamp": "2026-03-08T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 6.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0228",
+    "timestamp": "2026-03-08T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 7.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0229",
+    "timestamp": "2026-03-08T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 8.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0230",
+    "timestamp": "2026-03-09T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 9.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0231",
+    "timestamp": "2026-03-09T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 10.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0232",
+    "timestamp": "2026-03-09T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 11.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0233",
+    "timestamp": "2026-03-10T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 12.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0234",
+    "timestamp": "2026-03-10T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 13.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0235",
+    "timestamp": "2026-03-10T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 14.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0236",
+    "timestamp": "2026-03-10T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 15.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0237",
+    "timestamp": "2026-03-11T04:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 16.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0238",
+    "timestamp": "2026-03-11T11:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 17.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0239",
+    "timestamp": "2026-03-11T18:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 18.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0240",
+    "timestamp": "2026-03-12T01:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 19.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0241",
+    "timestamp": "2026-03-12T08:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 20.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0242",
+    "timestamp": "2026-03-12T15:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 21.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0243",
+    "timestamp": "2026-03-12T22:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 22.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0244",
+    "timestamp": "2026-03-13T05:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 23.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0245",
+    "timestamp": "2026-03-13T12:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 24.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0246",
+    "timestamp": "2026-03-13T19:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 25.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0247",
+    "timestamp": "2026-03-14T02:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 26.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0248",
+    "timestamp": "2026-03-14T09:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SQL Timeout",
+    "error_message": "SQL timeout expired while loading customer records.",
+    "root_cause": "Database query timeout.",
+    "resolution": "Review blocking and execution plan.",
+    "severity": "HIGH",
+    "duration": 27.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0249",
+    "timestamp": "2026-03-14T16:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "SQL Deadlock",
+    "error_message": "Transaction was deadlocked on Customer table.",
+    "root_cause": "Concurrent transactions contended for locks.",
+    "resolution": "Inspect deadlock graph and transaction order.",
+    "severity": "HIGH",
+    "duration": 28.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0250",
+    "timestamp": "2026-03-14T23:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Connection Failure",
+    "error_message": "Connection refused by database endpoint.",
+    "root_cause": "Dependency unavailable or unreachable.",
+    "resolution": "Verify endpoint, network, and pool.",
+    "severity": "HIGH",
+    "duration": 29.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0251",
+    "timestamp": "2026-03-15T06:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Authentication Failure",
+    "error_message": "Login failed for service account.",
+    "root_cause": "Credential or permission mismatch.",
+    "resolution": "Validate secret rotation and grants.",
+    "severity": "MEDIUM",
+    "duration": 30.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 0,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0252",
+    "timestamp": "2026-03-15T13:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "API Timeout",
+    "error_message": "Upstream API timeout after 30 seconds.",
+    "root_cause": "Upstream dependency latency.",
+    "resolution": "Inspect upstream latency and gateway limits.",
+    "severity": "HIGH",
+    "duration": 31.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 1,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0253",
+    "timestamp": "2026-03-15T20:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "API 500",
+    "error_message": "HTTP 500 Internal Server Error from customer API.",
+    "root_cause": "Unhandled upstream application exception.",
+    "resolution": "Inspect upstream trace and deployment.",
+    "severity": "HIGH",
+    "duration": 32.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 2,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0254",
+    "timestamp": "2026-03-16T03:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "File Missing",
+    "error_message": "Required file not found in landing zone.",
+    "root_cause": "Upstream delivery or path failure.",
+    "resolution": "Verify delivery and scheduler dependency.",
+    "severity": "MEDIUM",
+    "duration": 33.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 3,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0255",
+    "timestamp": "2026-03-16T10:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "File Corruption",
+    "error_message": "Checksum mismatch detected in source file.",
+    "root_cause": "Incomplete or corrupted transfer.",
+    "resolution": "Re-deliver file and verify checksum.",
+    "severity": "HIGH",
+    "duration": 34.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 4,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0256",
+    "timestamp": "2026-03-16T17:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "SSIS Failure",
+    "error_message": "SSIS Data Flow Task failed validation.",
+    "root_cause": "Package metadata or source schema drift.",
+    "resolution": "Review package and source schema.",
+    "severity": "HIGH",
+    "duration": 35.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 5,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0257",
+    "timestamp": "2026-03-17T00:00:00",
+    "system": "SQL Server",
+    "job": "Customer_Load",
+    "error_type": "Network Failure",
+    "error_message": "Network unreachable while calling dependency.",
+    "root_cause": "Network path or DNS failure.",
+    "resolution": "Check DNS, routing, and firewall telemetry.",
+    "severity": "HIGH",
+    "duration": 36.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 6,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0258",
+    "timestamp": "2026-03-17T07:00:00",
+    "system": "SSIS",
+    "job": "Order_Load",
+    "error_type": "Memory Error",
+    "error_message": "Out of memory while processing batch.",
+    "root_cause": "Batch exceeded process memory budget.",
+    "resolution": "Reduce batch size and inspect memory limits.",
+    "severity": "HIGH",
+    "duration": 37.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 7,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0259",
+    "timestamp": "2026-03-17T14:00:00",
+    "system": "Customer API",
+    "job": "Product_Master",
+    "error_type": "Disk Space",
+    "error_message": "Disk full prevented log write.",
+    "root_cause": "Insufficient filesystem capacity.",
+    "resolution": "Free capacity and review retention.",
+    "severity": "CRITICAL",
+    "duration": 38.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 8,
+      "source": "portfolio_generator"
+    }
+  },
+  {
+    "incident_id": "INC-0260",
+    "timestamp": "2026-03-17T21:00:00",
+    "system": "Data Lake",
+    "job": "Finance_Recon",
+    "error_type": "Data Quality Failure",
+    "error_message": "Null constraint violation in CustomerId.",
+    "root_cause": "Invalid source data.",
+    "resolution": "Quarantine records and contact data owner.",
+    "severity": "HIGH",
+    "duration": 39.0,
+    "metadata": {
+      "synthetic": true,
+      "batch": 9,
+      "source": "portfolio_generator"
+    }
+  }
+]

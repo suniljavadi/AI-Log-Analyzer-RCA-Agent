@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-02-03T00:00:00
+
+ERROR:
+SSIS Data Flow Task failed validation.
+
+Execution time: 27.0 minutes
+Expected execution time: 8 minutes

@@ -1,0 +1,9 @@
+Job: Order_Load
+System: SSIS
+Timestamp: 2026-03-16T03:00:00
+
+ERROR:
+Required file not found in landing zone.
+
+Execution time: 33.0 minutes
+Expected execution time: 8 minutes

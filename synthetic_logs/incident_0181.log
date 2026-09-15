@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-02-22T20:00:00
+
+ERROR:
+Disk full prevented log write.
+
+Execution time: 5.0 minutes
+Expected execution time: 8 minutes

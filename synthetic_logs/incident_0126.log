@@ -1,0 +1,9 @@
+Job: Order_Load
+System: SSIS
+Timestamp: 2026-02-06T19:00:00
+
+ERROR:
+SSIS Data Flow Task failed validation.
+
+Execution time: 40.0 minutes
+Expected execution time: 8 minutes

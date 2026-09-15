@@ -1,0 +1,9 @@
+Job: Order_Load
+System: SSIS
+Timestamp: 2026-02-05T15:00:00
+
+ERROR:
+Upstream API timeout after 30 seconds.
+
+Execution time: 36.0 minutes
+Expected execution time: 8 minutes

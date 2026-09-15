@@ -1,0 +1,1 @@
+"""Safe, mocked diagnostic tools."""

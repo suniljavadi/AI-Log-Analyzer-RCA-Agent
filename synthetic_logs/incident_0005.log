@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-01-02T12:00:00
+
+ERROR:
+Upstream API timeout after 30 seconds.
+
+Execution time: 9.0 minutes
+Expected execution time: 8 minutes

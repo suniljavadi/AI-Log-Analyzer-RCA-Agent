@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-03-15T20:00:00
+
+ERROR:
+HTTP 500 Internal Server Error from customer API.
+
+Execution time: 32.0 minutes
+Expected execution time: 8 minutes

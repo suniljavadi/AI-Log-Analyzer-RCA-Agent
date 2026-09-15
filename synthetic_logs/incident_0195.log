@@ -1,0 +1,9 @@
+Job: Product_Master
+System: Customer API
+Timestamp: 2026-02-26T22:00:00
+
+ERROR:
+Null constraint violation in CustomerId.
+
+Execution time: 19.0 minutes
+Expected execution time: 8 minutes

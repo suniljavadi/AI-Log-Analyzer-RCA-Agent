@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-01-24T16:00:00
+
+ERROR:
+Connection refused by database endpoint.
+
+Execution time: 40.0 minutes
+Expected execution time: 8 minutes

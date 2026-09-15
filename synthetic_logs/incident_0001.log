@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-01-01T08:00:00
+
+ERROR:
+SQL timeout expired while loading customer records.
+
+Execution time: 5.0 minutes
+Expected execution time: 8 minutes

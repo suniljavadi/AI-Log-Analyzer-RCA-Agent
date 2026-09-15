@@ -1,0 +1,9 @@
+Job: Product_Master
+System: Customer API
+Timestamp: 2026-01-03T02:00:00
+
+ERROR:
+Required file not found in landing zone.
+
+Execution time: 11.0 minutes
+Expected execution time: 8 minutes

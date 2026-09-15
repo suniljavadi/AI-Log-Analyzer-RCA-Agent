@@ -1,0 +1,9 @@
+Job: Finance_Recon
+System: Data Lake
+Timestamp: 2026-02-13T05:00:00
+
+ERROR:
+Upstream API timeout after 30 seconds.
+
+Execution time: 17.0 minutes
+Expected execution time: 8 minutes

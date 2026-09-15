@@ -1,0 +1,9 @@
+Job: Finance_Recon
+System: Data Lake
+Timestamp: 2026-02-22T13:00:00
+
+ERROR:
+Out of memory while processing batch.
+
+Execution time: 49.0 minutes
+Expected execution time: 8 minutes

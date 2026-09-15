@@ -1,0 +1,9 @@
+Job: Finance_Recon
+System: Data Lake
+Timestamp: 2026-02-16T17:00:00
+
+ERROR:
+Login failed for service account.
+
+Execution time: 29.0 minutes
+Expected execution time: 8 minutes

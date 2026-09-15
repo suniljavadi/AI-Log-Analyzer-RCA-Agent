@@ -1,0 +1,9 @@
+Job: Product_Master
+System: Customer API
+Timestamp: 2026-03-01T06:00:00
+
+ERROR:
+Checksum mismatch detected in source file.
+
+Execution time: 27.0 minutes
+Expected execution time: 8 minutes

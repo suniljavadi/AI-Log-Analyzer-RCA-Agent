@@ -1,0 +1,9 @@
+Job: Finance_Recon
+System: Data Lake
+Timestamp: 2026-01-10T09:00:00
+
+ERROR:
+HTTP 500 Internal Server Error from customer API.
+
+Execution time: 36.0 minutes
+Expected execution time: 8 minutes

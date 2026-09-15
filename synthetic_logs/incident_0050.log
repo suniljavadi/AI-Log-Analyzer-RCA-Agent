@@ -1,0 +1,9 @@
+Job: Order_Load
+System: SSIS
+Timestamp: 2026-01-15T15:00:00
+
+ERROR:
+Out of memory while processing batch.
+
+Execution time: 9.0 minutes
+Expected execution time: 8 minutes

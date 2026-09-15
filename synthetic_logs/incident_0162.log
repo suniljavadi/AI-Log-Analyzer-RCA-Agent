@@ -1,0 +1,9 @@
+Job: Order_Load
+System: SSIS
+Timestamp: 2026-02-17T07:00:00
+
+ERROR:
+HTTP 500 Internal Server Error from customer API.
+
+Execution time: 31.0 minutes
+Expected execution time: 8 minutes

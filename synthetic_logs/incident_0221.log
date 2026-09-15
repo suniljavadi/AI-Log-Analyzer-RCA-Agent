@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-03-06T12:00:00
+
+ERROR:
+Null constraint violation in CustomerId.
+
+Execution time: 45.0 minutes
+Expected execution time: 8 minutes

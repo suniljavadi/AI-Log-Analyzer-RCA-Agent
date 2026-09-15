@@ -1,0 +1,9 @@
+Job: Customer_Load
+System: SQL Server
+Timestamp: 2026-01-07T04:00:00
+
+ERROR:
+Checksum mismatch detected in source file.
+
+Execution time: 25.0 minutes
+Expected execution time: 8 minutes

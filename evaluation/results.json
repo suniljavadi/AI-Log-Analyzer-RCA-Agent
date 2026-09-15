@@ -1,0 +1,283 @@
+{
+  "test_incidents": 39,
+  "classification_accuracy": 1.0,
+  "retrieval_precision": 1.0,
+  "root_cause_accuracy_proxy": 1.0,
+  "groundedness": 1.0,
+  "hallucination_rate": 0.0,
+  "rows": [
+    {
+      "expected": "SQL Timeout",
+      "actual": "SQL Timeout",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SQL Deadlock",
+      "actual": "SQL Deadlock",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Connection Failure",
+      "actual": "Connection Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Authentication Failure",
+      "actual": "Authentication Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "API Timeout",
+      "actual": "API Timeout",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "API 500",
+      "actual": "API 500",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "File Missing",
+      "actual": "File Missing",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "File Corruption",
+      "actual": "File Corruption",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SSIS Failure",
+      "actual": "SSIS Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Network Failure",
+      "actual": "Network Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Memory Error",
+      "actual": "Memory Error",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Disk Space",
+      "actual": "Disk Space",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Data Quality Failure",
+      "actual": "Data Quality Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SQL Timeout",
+      "actual": "SQL Timeout",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SQL Deadlock",
+      "actual": "SQL Deadlock",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Connection Failure",
+      "actual": "Connection Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Authentication Failure",
+      "actual": "Authentication Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "API Timeout",
+      "actual": "API Timeout",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "API 500",
+      "actual": "API 500",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "File Missing",
+      "actual": "File Missing",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "File Corruption",
+      "actual": "File Corruption",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SSIS Failure",
+      "actual": "SSIS Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Network Failure",
+      "actual": "Network Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Memory Error",
+      "actual": "Memory Error",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Disk Space",
+      "actual": "Disk Space",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Data Quality Failure",
+      "actual": "Data Quality Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SQL Timeout",
+      "actual": "SQL Timeout",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SQL Deadlock",
+      "actual": "SQL Deadlock",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Connection Failure",
+      "actual": "Connection Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Authentication Failure",
+      "actual": "Authentication Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "API Timeout",
+      "actual": "API Timeout",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "API 500",
+      "actual": "API 500",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "File Missing",
+      "actual": "File Missing",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "File Corruption",
+      "actual": "File Corruption",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "SSIS Failure",
+      "actual": "SSIS Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Network Failure",
+      "actual": "Network Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Memory Error",
+      "actual": "Memory Error",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Disk Space",
+      "actual": "Disk Space",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    },
+    {
+      "expected": "Data Quality Failure",
+      "actual": "Data Quality Failure",
+      "correct": true,
+      "confidence": 90,
+      "grounded": true
+    }
+  ]
+}

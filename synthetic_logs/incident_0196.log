@@ -1,0 +1,9 @@
+Job: Finance_Recon
+System: Data Lake
+Timestamp: 2026-02-27T05:00:00
+
+ERROR:
+SQL timeout expired while loading customer records.
+
+Execution time: 20.0 minutes
+Expected execution time: 8 minutes

@@ -1,0 +1,9 @@
+Job: Product_Master
+System: Customer API
+Timestamp: 2026-02-09T10:00:00
+
+ERROR:
+Upstream API timeout after 30 seconds.
+
+Execution time: 49.0 minutes
+Expected execution time: 8 minutes
