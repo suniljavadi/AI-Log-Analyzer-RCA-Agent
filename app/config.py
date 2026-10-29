@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+from pydantic import model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -12,6 +13,14 @@ class Settings(BaseSettings):
     openai_model: str = "gpt-4o-mini"
     llm_mode: str = "mock"
     log_level: str = "INFO"
+    @model_validator(mode="after")
+    def validate_llm(self) -> "Settings":
+        if self.llm_mode not in {"mock", "openai"}:
+            raise ValueError("LLM_MODE must be 'mock' or 'openai'")
+        if self.llm_mode == "openai" and not self.openai_api_key:
+            raise ValueError("OPENAI_API_KEY is required when LLM_MODE=openai")
+        return self
+
     model_config = SettingsConfigDict(env_file=".env", case_sensitive=False, extra="ignore")
 
 

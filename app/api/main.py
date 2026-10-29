@@ -3,7 +3,7 @@ from datetime import datetime
 
 from fastapi import Depends, FastAPI, HTTPException
 from starlette.middleware.base import BaseHTTPMiddleware
-from sqlalchemy import select
+from sqlalchemy import select, text
 from sqlalchemy.orm import Session
 
 from app.config import get_settings
@@ -34,6 +34,15 @@ def get_analyzer() -> LogAnalyzer:
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok", "service": "ai-log-analyzer", "mode": get_settings().llm_mode}
+
+
+@app.get("/ready")
+def ready(db: Session = Depends(get_db)) -> dict:
+    try:
+        db.execute(text("SELECT 1"))
+    except Exception:
+        raise HTTPException(status_code=503, detail="Database unavailable")
+    return {"status": "ready", "database": "ok"}
 
 
 @app.post("/api/v1/analyze", response_model=AnalysisResult)

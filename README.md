@@ -246,3 +246,10 @@ Demonstrates Python, FastAPI, Streamlit, SQLAlchemy, deterministic retrieval, RA
 - [AI Log Analyzer and RCA Agent](https://github.com/suniljavadi/AI-Log-Analyzer-RCA-Agent)
 - [Multi-Agent Data Engineering Assistant](https://github.com/suniljavadi/Multi-Agent-AI-Data-Engineering-Assistant)
 - [Data Engineering MCP Server](https://github.com/suniljavadi/data-engineering-mcp-server)
+
+## Production notes
+
+- Probes: GET /health (liveness) and GET /ready (checks database connectivity).
+- Docker Compose requires POSTGRES_PASSWORD to be set in your environment (no default password is shipped). LLM_MODE=openai requires OPENAI_API_KEY; invalid config fails at startup.
+- Every request is logged as JSON with an X-Request-ID; unhandled errors return a 500 with that ID.
+- CI (.github/workflows/ci.yml) runs pytest and a Docker build. The container runs as a non-root user.

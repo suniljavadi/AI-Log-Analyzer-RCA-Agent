@@ -4,20 +4,30 @@ services:
     environment:
       POSTGRES_DB: log_analyzer
       POSTGRES_USER: log_analyzer
-      POSTGRES_PASSWORD: log_analyzer_dev
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U log_analyzer -d log_analyzer"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
   api:
     build: .
     environment:
-      DATABASE_URL: postgresql+psycopg://log_analyzer:log_analyzer_dev@postgres:5432/log_analyzer
-      LLM_MODE: mock
+      DATABASE_URL: postgresql+psycopg://log_analyzer:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@postgres:5432/log_analyzer
+      LLM_MODE: ${LLM_MODE:-mock}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
     ports:
       - "8000:8000"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
   dashboard:
     build: .
     command: streamlit run streamlit_app/app.py --server.address 0.0.0.0 --server.port 8501
@@ -27,5 +37,6 @@ services:
       - "8501:8501"
     depends_on:
       - api
+    restart: unless-stopped
 volumes:
   postgres_data:
